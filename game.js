@@ -1,7 +1,4 @@
 function game() {
-  // init
-  var score = 0;
-  var interval = 5000;
   var array =
   [
     'red',
@@ -10,31 +7,67 @@ function game() {
     'blue',
     'purple',
   ];
+  var current_color = array[randomInteger(0, 4)]
+  var score = 0;
+  var interval = 5000;
 
   var buttons_block = document.getElementById('buttons');
-  for (var i = 0; i < 5; i++) {
-    var button = document.createElement('button');
-    button.id = i;
-    button.innerText = colors[i];
-    buttons_block.appendChild(button);
+  var current_color_el = document.getElementById('current_color');
+  var score_block =document.getElementById('score');
+
+  document.getElementsByClassName('button').onclick = press_button;
+
+  score_block.innerText = score;
+
+  current_color_el.innerText = "COLOR";
+  // var index = randomInteger(0, 4);
+  place_buttons(array);
+  runtime();
+
+  function randomInteger(min, max) {
+    var rand = min - 0.5 + Math.random() * (max - min + 1)
+    rand = Math.round(rand);
+    return rand;
   }
 
-  var current_color = 1;
-  randomInteger(min, max)
-  setInterval(function() {
-    var colors = array_randomize();
-    colors.forEach();
-  }, interval);
-
-  function array_randomize() {
-    var new_array = [];
-    var array_count = array.length;
-    while (array.length !== 0) {
-      var index = randomInteger(0, array.length);
-      new_array.push(array[index]);
-      array.splice(index, 1);
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
     }
+    return a;
+  }
 
-    return new_array;
+  function place_buttons(colors) {
+    buttons_block.innerHTML = "";
+    colors.forEach(function(currentValue, index, array){
+      var button = document.createElement('button');
+      button.id = index;
+      button.innerText = currentValue;
+      button.addEventListener("click", press_button);
+      buttons_block.appendChild(button);
+    });
+  }
+
+  function press_button() {
+    var currentValue = this.innerText;
+    if (current_color_el.className == currentValue) {
+      score++;
+    } else {
+      score--;
+    }
+    score_block.innerText = score;
+    runtime();
+  }
+
+  function runtime() {
+
+
+    setInterval(function() {
+      current_color_el.className = current_color;
+
+      var colors = shuffle(array);
+      place_buttons(colors);
+    }, interval);
   }
 }
