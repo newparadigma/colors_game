@@ -42,10 +42,7 @@ function game() {
   function replace_buttons() {
     //init
     var button_texts = shuffle(array);
-    // var button_colors = shuffle(button_texts);
 
-    console.log(button_texts);
-    console.log(button_colors);
     //clear area
     buttons_block.innerHTML = "";
     //replace_buttons
