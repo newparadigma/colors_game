@@ -1,19 +1,34 @@
+.main {
+  width: 100%;
+  height: 100%;
+  /* background-color:#64FFDA; */
+}
+
 .red {
-  color: red;
+  background-color: red;
 }
 
 .orange {
-  color: orange;
+  background-color: orange;
 }
 
 .green {
-  color: green;
+  background-color: green;
 }
 
 .blue {
-  color: blue;
+  background-color: blue;
 }
 
-.purple {
-  color: purple;
+#colors {
+  text-align: center;
+  color: white;
 }
+
+#menu {
+  height: 30%;
+}
+
+/* .purple {
+  color: purple;
+} */

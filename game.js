@@ -1,5 +1,11 @@
 
+var interval_id;
+
 function game() {
+  if (interval_id) {
+    clearInterval(interval_id);
+  }
+
   var array =
   [
     'red',
@@ -12,7 +18,6 @@ function game() {
   var current_color;
   var score = 0;
   var interval = 5000;
-  var interval_id;
 
   var buttons_block = document.getElementById('buttons');
   var current_color_el = document.getElementById('current_color');

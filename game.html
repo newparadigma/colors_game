@@ -6,6 +6,46 @@
   </head>
   <body>
     <link href="game.css" rel="stylesheet" type="text/css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+
+    <section class="main">
+      <div class="container">
+        <div class="row" id="menu">
+          <div class="col-md-12" id="start">
+            START/STOP GAME
+          </div>
+          <div class="col-md-12" id="score">
+            SCORE: 0
+          </div>
+        </div>
+
+        <div class="row" id="colors">
+          <div class="col-md-3 red">
+            btn-1
+          </div>
+          <div class="col-md-3 orange">
+            btn-2
+          </div>
+          <div class="col-md-3 green">
+            btn-3
+          </div>
+          <div class="col-md-3 blue">
+            btn-4
+          </div>
+        </div>
+      </div>
+    </section>
 
     <h1>Press start to start the game</h1>
     <button type="button" onclick="game()" name="button">start</button>
@@ -24,6 +64,5 @@
 
     </div>
 
-    <script type="text/javascript" src="game.js"></script>
   </body>
 </html>
