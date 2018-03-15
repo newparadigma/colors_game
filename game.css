@@ -25,16 +25,21 @@ body {
   cursor: pointer;
 }
 
-#colors:hover {
-  background-color: white;
+#colors div {
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 
+/* #colors:hover {
+  background-color: white;
+} */
+
 #menu {
+  cursor: pointer;
   height: 150px;
 }
 
-#menu div {
-  /* background-color: */
+#start {
   padding-top: 75px;
   padding-bottom: 75px;
 }
