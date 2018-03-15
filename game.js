@@ -1,4 +1,32 @@
 
+
+var model = {
+  var array =
+  [
+    'red',
+    'orange',
+    'green',
+    'blue',
+    'purple',
+  ];
+}
+
+var view = {
+  startStop : function(value) {
+    el = document.getElementById('start');
+    el.innerText = value;
+  }
+
+  changeCurrentColor : function(array) {
+    color = Math.random()
+  }
+}
+
+var controller = {
+
+}
+
+
 var interval_id;
 
 function game() {

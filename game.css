@@ -1,32 +1,42 @@
-.main {
-  width: 100%;
-  height: 100%;
-  /* background-color:#64FFDA; */
+
+body {
+  text-align: center;
 }
 
 .red {
-  background-color: red;
+  background-color: #F44336;
 }
 
 .orange {
-  background-color: orange;
+  background-color: #FF9800;
 }
 
 .green {
-  background-color: green;
+  background-color: #4CAF50;
 }
 
 .blue {
-  background-color: blue;
+  background-color: #2196F3;
 }
 
 #colors {
   text-align: center;
   color: white;
+  cursor: pointer;
+}
+
+#colors:hover {
+  background-color: white;
 }
 
 #menu {
-  height: 30%;
+  height: 150px;
+}
+
+#menu div {
+  /* background-color: */
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 /* .purple {
